@@ -1,21 +1,13 @@
 import turtle
 import pandas
+
 FONT = ("Courier", 8, "bold")
 ALREADY_GUESSED_FONT = ("Courier", 20, "bold")
 
 screen = turtle.Screen()
 screen.title("U.S. States Game")
 image = "blank_states_img.gif"
-screen.addshape(image)
-
-turtle.shape(image)
-
-# def get_mouse_click_coor(x, y):
-#     print(x, y)
-#
-#
-# turtle.onscreenclick(get_mouse_click_coor)
-# turtle.mainloop()
+screen.bgpic(image)
 
 data = pandas.read_csv("50_states.csv")
 all_states = data.state.to_list()
@@ -24,7 +16,6 @@ turtl = turtle.Turtle()
 turtl.hideturtle()
 turtl.penup()
 turtl.goto(-100, 0)
-
 
 while len(guessed_states) < 50:
     answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Correct",
@@ -48,5 +39,4 @@ while len(guessed_states) < 50:
         t.penup()
         state_data = data[data.state == answer_state]
         t.goto(int(state_data.x), int(state_data.y))
-        # turtle.write(answer_state, font=FONT)
         t.write(state_data.state.item(), font=FONT)
