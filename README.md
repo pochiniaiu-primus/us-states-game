@@ -7,7 +7,7 @@ Python with the Turtle graphics module and pandas.
 
 This game challenges the player to name all 50 U.S. states.
 When a correct state name is entered, it appears on the U.S. map at the corresponding location.
-If the user clicks "Cancel" or types "Exit", the game ends and a list of the remaining (unanswered) 
+If the user clicks "Cancel" or types "Exit", the game ends and a list of the remaining (unanswered)
 states is saved to a CSV file.
 
 ## Features
@@ -28,3 +28,4 @@ states is saved to a CSV file.
 - **'50_states.csv' - contains U.S. state names and their (x, y) map coordinates.**
 - **'states_to_learn.csv' - automatically created at the end of the game with the list of states you didn't guess.**
 - **'blank_states_img.gif' - map background used to display state names.**
+  ![img.png](img.png)
